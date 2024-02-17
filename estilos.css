@@ -1,0 +1,702 @@
+*{
+    /* Resetear comportamiento por defecto de HTML */
+    padding: 0;
+    margin: 0;
+    font-size: 20px; /* Por defecto son 16px */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+/* Header */
+ul > li > a{
+    text-decoration: none;
+    color: black;
+}
+ul > li{
+    list-style: none;
+}
+ li > a:hover {
+    transition: .5s;
+    color: white;
+}
+.barraMenu{
+    width: 100%;
+    background-color: #abd9f5;
+    display: flex;
+    height: 3em; /* 4 veces el font-size del universal */
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    top: 0px;
+    z-index: 1;
+}
+.listaMenu{
+    display: flex;
+    width: 700px;
+    justify-content: space-around;
+}
+.logo{
+    max-width: 100px;
+    left: 5px;
+    position: absolute;
+}
+.imagen{
+    max-width: 50px;
+}
+/* Home */
+.home{ /* Estaba adaptado al tamaño del h2 */
+    background-image: url("./Img/Fondo-Header.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;        /* Centrar contenedores y llevarlos al borde de la página*/
+    justify-content: flex-end; 
+}
+.imagen-Home{
+    max-width: 600px;
+    box-shadow: 10px 10px #abd9f5;
+    margin-left: 30px;
+}
+.tituloBoton{
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+    margin-right: 30px;
+    margin-left: 10px;
+}
+.tituloBoton > h1{ /* Mi header lo está tapando */
+    font-size: 3em;
+    margin-bottom: 30px;
+    text-align: center;
+}
+.tituloBoton > h2{
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 25px;
+}
+.tituloBoton > .boton{
+    align-self: center;
+}
+.boton > a{
+    text-decoration: none;
+    background:linear-gradient(rgb(9, 121, 176),rgb(124, 218, 249));
+    color: black;
+    text-transform: uppercase;
+    padding: 20px 40px;
+    line-height: 60px;
+    width: 100%;
+    border-radius: 50px;
+    box-shadow: 0 2px 0 2px #000;
+}
+.boton:active{
+    transform: scale(0.9); /* Reduce el tamaño al hacer click. */
+}
+/* Nosotros */
+.nosotros{
+    width: 100%;
+    padding-bottom: 50px;
+    background-image: linear-gradient(rgba(255,255,255,0.2),rgba(255, 255, 255, 0.2)), url("./Img/FondoHospital.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.cont-titulo-nosotros{
+    width: 100%;
+    height: 15vh;
+    background-color: #079CF6;
+    text-align: center;
+    line-height: 100px;
+    margin-bottom: 20px;
+}
+.titulo-nosotros{
+    font-size: 3em;
+    text-transform: uppercase;
+}
+.texto-foto-nosotros{
+    margin:0 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.texto-foto-nosotros > p{
+    padding: 10px 0;
+    max-width: 700px;
+}
+.foto-nosotros{
+    max-width: 700px;
+}
+.contenedorColaboradores{
+    display: flex;
+    justify-content: space-evenly;
+}
+.texto-colaboradores{
+    font-size: 2em;
+    padding: 10px 0;
+    margin: 20px 0;
+    background: linear-gradient(#0e8ddd,#0f578b);
+    border-radius: 40px;
+    width: 500px;
+    position: relative;
+    left: 400px;
+    text-align: center;
+    text-transform: uppercase;
+}
+.colaboradorUno, .colaboradorDos{
+    position: relative;
+    width: 350px;
+    height: 400px;
+    overflow: hidden;
+}
+.imagenColaborador{
+    width: 100%;
+    height: 100%;
+    transition:.5s ease;
+}
+.textoPrimerColaborador, .textoSegundoColaborador{
+    font-size: 3em;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #079CF6;
+    width: 350px;
+    height: 400px;
+    opacity: .7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    visibility: hidden;
+    transition: .5s ease;
+}
+.textoPrimerColaborador > h2, .textoSegundoColaborador > h2{
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+.colaboradorUno:hover .textoPrimerColaborador, .colaboradorDos:hover .textoSegundoColaborador{
+    visibility: visible;
+    cursor: pointer;
+}
+.colaboradorUno:hover .imagenColaborador, .colaboradorDos:hover .imagenColaborador{
+    transform: scale(1.1);
+}
+/* Servicios */
+.servicios{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: linear-gradient(rgba(81,1444,239,0.2),rgba(81,144,239,0.2));
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.cont-titulo-servicios{
+    background-color: #079CF6;
+    width: 100%;
+    text-align: center;
+}
+.cont-titulo-servicios > h2{
+    font-size: 3em;
+    padding: 15px;
+    text-transform: uppercase;
+}
+.contenedor{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.tarjeta{
+    width: 100%;
+    margin: 20px;
+    border-radius: 6px;
+    overflow: hidden; /* Los elementos fuera del contenedor tarjeta se ocultan */
+    background-color: white;
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.2);
+    cursor: default; /* Para que no aparezca el cursor de texto al pasar encima de las tarjetas */
+    transition: all 400ms ease;
+}
+.tarjeta:hover{
+    box-shadow: 5px 5px 20px rgba(0,0,0,0.4);
+    transform: translateY(-3%); /* Cuando pasemos el cursor por encima de las tarjetas, se traslada un 3% hacia arriba*/
+}
+/* Ajustar imágenes */
+.tarjeta img{
+    width: 100%;
+    height: 200px;
+}
+.tarjeta .contenido{
+    padding: 15px;
+    text-align: center;
+}
+.tarjeta .contenido p{
+    line-height: 1.5;
+    color: gray;
+}
+.tarjeta .contenido h3{
+    font-weight: 400;
+    margin-bottom: 15px;
+    color: black;
+}
+.tarjeta .contenido a{
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px;
+    margin-top: 10px;
+    color: #5190EF;
+    border: 1px solid #5190EF;
+    border-radius: 4px;
+    transition: all 400ms ease;
+}
+.tarjeta .contenido a:hover{
+    background-color: #079CF6;
+    color: white;
+}
+/* Testimonios */
+.cont-titulo-testimonios{
+    background-color: #079CF6;
+    width: 100%;
+}
+.cont-titulo-testimonios > h2{
+    font-size: 3em;
+    text-align: center;
+    padding: 15px;
+    text-transform: uppercase;
+}
+.testimonios{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.testimonioCliente{
+    padding-top: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.testimonioCliente > .imageTesti{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    padding-bottom: 25px;
+}
+.testimonioCliente p{
+    width: 700px;
+    padding: 0 100px;
+    text-align: center;
+    font-size: 14px;
+    color: rgb(177,172,172);
+    padding-bottom: 25px;
+    line-height: 2;
+}
+.iconoComillas{
+    font-size: 40px;
+    padding-bottom: 25px;
+    color: #079CF6;
+}
+.nombreCliente{
+    padding-bottom: 25px;
+    font-size: 24px;
+}
+.contenedorTestimonios{
+    display: flex;
+}
+.botonesTestimonios button{
+    font-size: 1.8em;
+    height: 2em;
+    width: 2em;
+    background-color: white;
+    position: absolute;
+    top: 0;         /* Indicamos que el elemento ocupe toda la altura de su contenedor */
+    bottom: 0;
+    margin: auto; /* Lo centramos verticalmente */
+    border: none;
+    color: #079CF6;
+    box-shadow: 0 0 16px rgba(1,17,39,0.25);
+    cursor: pointer;
+    border-radius: 50%;
+}
+#siguienteTestimonios{
+    right: 20px;
+}
+#anteriorTestimonios{
+    left: 20px;
+}
+.iconoSlideTestimonio{
+    font-size: 28px;
+}
+.botonesTestimonios button:hover{
+    box-shadow: 0 0 30px rgba(1,17,39,0.25);
+}
+.oculto{
+    display: none;
+}
+.fade {
+    animation-name: fade; /* Coincide con el nombre definido en @keyframes */
+    animation-duration: 1.5s;/* Duración de la animación en segundos */
+}
+  
+@keyframes fade {
+    from {opacity: .4} /* Indica el estado inicial de la animación. Establece 
+                        la opacidad del elemento en 0.4 (40%).*/
+    to {opacity: 1} /* Estado final. La opacidad del elemento es del 100% */
+    /* La animación hace que la opacidad del elemento cambie suavemente
+     de 0.4 a 1 durante 1.5 segundos. */
+}
+/* Estadísticas */
+.estadisticas{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    background-color: #5190EF;
+}
+.añosExperiencia,.clientesSatisfechos,.certificados{
+    padding: 20px;
+}
+.añosExperiencia > h2, .clientesSatisfechos > h2, .certificados > h2{
+    font-size: 2em;
+    text-align: center;
+    color: white;
+}
+.clientesSatisfechos > h2, .añosExperiencia > h2, .certificados > h2{
+    position: relative;
+    right: 30px;
+}
+.clientesSatisfechos > p, .añosExperiencia > p, .certificados > p{
+    position: relative;
+    right: 30px;
+}
+/* Contacto */
+.cont-titulo-contacto{
+    width: 100%;
+    padding: 20px 0px;
+}
+.cont-titulo-contacto > h2{
+    font-size: 3em;
+    text-align: center;
+    text-transform: uppercase;
+}
+.contacto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.contacto > img{
+    width: 500px;
+}
+.contacto > a{
+    align-self: flex-start;
+    margin-top: 50px;
+    margin-left: 150px;
+}
+.iconoWhatsApp{
+    font-size: 50px;
+    color: green;
+}
+.contenedorRedesHorarios{
+    padding-top: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.contenedorRedes{
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.tituloRedes > h3{
+    font-size: 2em;
+    text-transform: uppercase;
+}
+.iconosRedes{
+    display: flex;
+    justify-content: center;
+    width: 300px;
+}
+.iconoFacebook{
+    font-size: 50px;
+    color: blue;
+}
+.iconoFacebook:hover, .iconoInstagram:hover, .iconoLinkedin:hover{
+    transform: scale(1.5);
+}
+.iconoInstagram{
+    font-size: 50px;
+    color: black;
+}
+.iconoLinkedin{
+    font-size: 50px;
+    color: #5190EF;
+}
+.horarios{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.horarios > h3{
+    font-size: 2em;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+}
+.ubicacionGoogleMaps{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.ubicacionTexto{
+    font-size: 2em;
+    text-transform: uppercase;
+    padding-top: 40px;
+    padding-bottom: 20px;
+}
+.gps{
+    width: 60%;
+}
+/* Footer */
+#footer{
+    height: 23vh;
+    margin-top: 50px;
+    background-color: #abd9f5;
+}
+.firma{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.copy > img{
+    width: 100px;
+}
+.textoCopyright{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.textoCopyright > p{
+    font-size: 15px;
+}
+.dmail{
+    font-size: 14px;
+}
+.logosFooter{
+    width: 53%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.iconoWhatsAppFooter{
+    color: green;
+    font-size: 40px;
+}
+.iconoFacebookFooter{
+    color: blue;
+    font-size: 40px;
+}
+.iconoLinkedinFooter{
+    color: #079CF6;
+    font-size: 40px;
+}
+.iconoInstagramFooter{
+    font-size: 40px;
+    color: black;
+}
+/* Form Wizard */
+.contenedorWizard{
+    width: 350px;
+    height: 430px;
+    background-color: white;
+    border-radius: 20px;
+    position: relative;
+    margin:80px auto;
+    transition: 1s; /* La transición de 1s aplicada al contenedor
+                    permite que cualquier cambio en el CSS de este contenedor tarde 1 segundo
+                    en completarse. Esto genera una animación suave. */
+    overflow: hidden;
+    z-index: 1001;
+    display: none;
+}
+h3{
+    text-align: center;
+    margin: 10px 0;
+}
+.contenedorWizard form{
+    width: 280px;
+    position: absolute;
+    top: 60px;
+    left: 35px;
+    transition: 1s; /* Animación al cambiar de etapa */
+                    /* La transición de 1s aplicada al form
+                    permite que cualquier cambio en el CSS de este formulario tarde 1 segundo
+                    en completarse. */
+}
+form input{
+    width: 100%;
+    padding: 12px 5px;
+    margin: 5px 0px;
+    border: none;
+    border-bottom: 1px solid #999;
+    outline: none;
+    background: none;
+}
+form textarea{
+    margin-top: 10px;
+    height: 90px;
+    width: 100%;
+    resize: none; /* No se puede redimensionar */
+    outline: none;
+}
+.botonSiguiente{
+    width: 100%;
+    text-align: center;
+}
+.estiloBoton{
+    width: 110px;
+    height: 40px;
+    border-radius: 50px;
+    margin-top: 20px;
+    background: linear-gradient(#63a3cb,#0f578b);
+    color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    justify-content: center;
+}
+.progreso{
+    width: 360px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 -1px 5px -1px black;
+    position: relative;
+}
+.pasos{
+    width: 120px;
+    text-align: center;
+    position: relative;
+}
+#barraProgreso{
+    position: absolute;
+    width: 120px;
+    height: 100%;
+    background: linear-gradient(#0e8ddd,#0f578b);
+}
+.dosBotones{
+    display: flex;
+    justify-content: center;
+}
+.dosBotones button{
+    margin: 20px;
+}
+/* Animación de desplazamiento suave */
+@keyframes deslizar {
+    from {
+        opacity: 0; /* Inicia con una opacidad de 0 */
+        transform: translateX(10%); /* Desplaza el formulario hacia la derecha un 10% de su
+                                    ancho original. */
+    }
+    to {
+        opacity: 1; /* Termina con una opacidad de 1 */
+        transform: translateX(0%); /* Termina con el formulario en su posición original, sin
+                                    desplazamiento horizontal. */
+    }
+}
+
+.formDeslizar form {
+    animation: deslizar 0.5s ease-in-out; /* Aplica la animación deslizar al 
+                                            formulario dentro del contenedor con la clase 
+                                            formDeslizar. La animación dura 0.5 segundos 
+                                            y utiliza un ease-in-out (comienza 
+                                            lentamente, acelera en el medio y luego 
+                                            desacelera al final). */
+}
+#fondoOscuro{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0; /* Aseguran que la capa se coloque en la esquina superior
+             izquierda de la ventana del navegador. */
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Fondo negro semi-transparente */
+    z-index: 1000; 
+}
+.contenedorServiciosFormulario{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.serviciosFormulario{
+    padding: 10px;
+}
+.botonesServicios{
+    text-align: center;
+    font-size: 12px;
+    width: 90px;
+    height: 40px;
+    border-radius: 50px;
+    margin-top: 20px;
+    background: linear-gradient(#c5d4de,#61bbfa);
+    color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    justify-content: center;
+}
+.botonesServicios:hover{
+    background: linear-gradient(#185278,#17659d);
+}
+.botonesServicios-clicked{
+    background: linear-gradient(#185278,#17659d);
+}
+
+@keyframes fadeIn { /* Keyframes crea animaciones mediante la definición de fotogramas clave.
+                    */
+    from {     /* El elemento tiene opacidad 0 al inicio. El elemento se desplaza hacia arriba
+                    20 píxeles. */
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to { /* El elemento tiene opacidad 1 al final. El elemento vuelve a su posicionamiento original
+                sin desplazamiento vertical. */
+        opacity: 1; 
+        transform: translateY(0);
+    }
+    /* La animación fadeIn hará que el mensaje de comprobación pase de ser invisible 
+    (opacity: 0) y de estar desplazado hacia arriba (transform: translateY(-20px))
+     a ser completamente visible y sin desplazamiento (opacity: 1, transform: translateY(0)). */
+}
+#mensajeComprobación{
+    background-color: white;
+    width: 500px;
+    height: 150px;
+    background-color: white;
+    border-radius: 20px;
+    position: relative;
+    margin:80px auto;
+    transition: 1s;
+    overflow: hidden;
+    z-index: 1001;
+    display: none;
+    text-align: center;
+    animation: fadeIn 0.5s ease-in-out; /* Aplica la animación llamada fadeIn al elemento,
+                                         con una duración de 0.5 segundos y con un ease-in-out.*/
+}
+/* Mensaje de servicio seleccionado en el wizard */
+#mostrarServicioSeleccionado{
+    text-align: center;
+}
+/* Mensaje de error textarea */
+.mensajeDeErrorTextarea, .mensajeDeErrorDatosPersonales{
+    display: none;
+}
+#botonOcultito{
+    visibility: hidden;
+    width: 300px;
+}
